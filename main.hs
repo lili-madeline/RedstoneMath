@@ -42,7 +42,7 @@ min a b = maxSignal |-* m
   m = (maxSignal |-* a) =|- (maxSignal |-* b) 
 
 add :: SignalStrength -> SignalStrength -> (SignalStrength, SignalStrength)
-add a b = (maxSignal |-* i5,i3)
+add a b = (maxSignal |-* i5,i3 |-* newSignal 14)
   where
     i = (i1 |-* b) =|- (b |-* i1)
     i1 = maxSignal |-* a 
